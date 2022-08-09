@@ -1,27 +1,33 @@
 public class Person {
-    private static String name = "Joey";
+    private String name;
+
+    public Person(String name) {
+        this.name = name;
+    }
+
     public static void main(String[] args) {
-    getName();
-//    setName("Katara");
-    sayHello();
+        Person person1 = new Person("Katara");
+        person1.getName();
+        person1.setName("Kairo");
+        System.out.println(person1.getName());
+        person1.sayHello();
 
     }
 
-    public static String getName(){
-//TODO: return the person's name
-
-//        System.out.println( Person.name);
-       return Person.name;
+    public String getName() {
+        return name;
     }
 
-    public static void setName(String name){
-//TODO: change the name field to the passed value
-        Person.name = name;
-//        System.out.println(name);
+    public void setName(String name) {
+        this.name = name;
     }
-    public static void sayHello(){
+
+    public void sayHello() {
 //TODO: print a message to the console using the person's name
-        System.out.println("Hi " + getName());
+        System.out.println("Hey " + getName());
+
     }
+
+
 
 }
