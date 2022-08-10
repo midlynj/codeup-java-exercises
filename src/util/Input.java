@@ -39,7 +39,7 @@ public class Input {
 
     }
 
-    private int getInt(int min, int max) {
+    public int getInt(int min, int max) {
         System.out.println("Pick a number between " + min + " and " + max);
         int userNumber = scanner.nextInt();
         if (userNumber < min || userNumber > max) {
