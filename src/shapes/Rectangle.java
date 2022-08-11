@@ -31,12 +31,8 @@ public class Rectangle {
         return getLength() * 2 + getWidth() * 2;
     }
 
-    class Square extends Rectangle {
 
-        public Square(int side) {
-            super(length, width);
-        }
-    }
+
 
 
 

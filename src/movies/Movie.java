@@ -4,10 +4,12 @@ public class Movie {
     private String name;
     private String category;
 
-//    @Override
-//    public String toString() {}
+    @Override
+    public String toString() {
+        return this.name + "--" + this.category;
+    }
 
-    public Movie(String name,String category) {
+    public Movie(String name, String category) {
         this.name = name;
         this.category = category;
     }

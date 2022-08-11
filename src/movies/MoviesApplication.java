@@ -14,7 +14,11 @@ public class MoviesApplication {
 //        System.out.println("View all movies or by category? [y/n]");
 //        String viewMovieBy = scanner.next();
         Input input = new Input();
-        allMovies();
+//        allMovies();
+//            musicalCategory();
+//        dramaCategory();
+//        musicalCategory();
+
 
         int choice = INVALID_CHOICE;
         while(choice != EXIT_CHOICE) {
@@ -49,18 +53,27 @@ public class MoviesApplication {
             case 1:
                 // TODO: view all movies
 //               return MoviesArray.findAll();
+//                allMovies();
+                musicalCategory(1);
                 break;
             case 2:
                 // TODO: view movies in the musical category
+                musicalCategory(2);
                 break;
             case 3:
                 // TODO: view movies in the drama category
+                musicalCategory(3);
+//                dramaCategory();
                 break;
             case 4:
                 // TODO: view movies in the horror category
+//                horrorCategory();
+                musicalCategory(4);
                 break;
             case 5:
                 // TODO: view movies in the scifi category
+//                scifiCategory();
+                musicalCategory(5);
                 break;
         }
     }
@@ -72,6 +85,62 @@ public class MoviesApplication {
             }
 //            System.out.println(Arrays.toString(MoviesArray.findAll()));
         }
+
+        public static void musicalCategory() {
+            MoviesArray.findAll();
+            for (Movie mn : MoviesArray.findAll()) {
+                if (mn.getCategory().equals("musical")) {
+                    System.out.println(mn.getName());
+                }
+            }
+        }
+
+    public static void dramaCategory() {
+        MoviesArray.findAll();
+        for (Movie mn : MoviesArray.findAll()) {
+            if (mn.getCategory().equals("drama")) {
+                System.out.println(mn.getName());
+            }
+        }
+    }
+
+    public static void horrorCategory() {
+        MoviesArray.findAll();
+        for (Movie mn : MoviesArray.findAll()) {
+            if (mn.getCategory().equals("horror")) {
+                System.out.println(mn.getName());
+            }
+        }
+    }
+
+    public static void scifiCategory() {
+        MoviesArray.findAll();
+        for (Movie mn : MoviesArray.findAll()) {
+            if (mn.getCategory().equals("scifi")) {
+                System.out.println(mn.getName());
+            }
+        }
+    }
+
+    public static void musicalCategory(int input) {
+        MoviesArray.findAll();
+        for (Movie mn : MoviesArray.findAll()) {
+            if (input == 2 && mn.getCategory().equals("musical")) {
+                System.out.println(mn.getName());
+            } else if (input == 3 &&   mn.getCategory().equals("drama")) {
+//                mn.getCategory().equals("drama");
+                System.out.println(mn.getName());
+            } else if (input == 4 &&   mn.getCategory().equals("horror")) {
+//                mn.getCategory().equals("horror");
+                System.out.println(mn.getName());
+            } else if (input == 5 &&   mn.getCategory().equals("scifi")) {
+//                mn.getCategory().equals("scifi");
+                System.out.println(mn.getName());
+            } else if (input == 1) {
+                System.out.println(mn.getName());
+            }
+        }
+    }
 
 //        public  static void toString(String[]people) {
 //            Arrays.toString(people);
