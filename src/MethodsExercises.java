@@ -8,8 +8,8 @@ public class MethodsExercises {
 //        mathMultiplication(2,2);
 //        mathModulus(2,2);
 //        getInteger(1,10);
-//        factorial(1,10);
-        rollDice();
+        factorial(1,10);
+//        rollDice();
     }
         public static void mathAddition ( int input1, int input2){
             System.out.println(input1 + input2);
