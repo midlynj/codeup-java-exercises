@@ -54,26 +54,26 @@ public class MoviesApplication {
                 // TODO: view all movies
 //               return MoviesArray.findAll();
 //                allMovies();
-                musicalCategory(1);
+                movieCategory(1);
                 break;
             case 2:
                 // TODO: view movies in the musical category
-                musicalCategory(2);
+                movieCategory(2);
                 break;
             case 3:
                 // TODO: view movies in the drama category
-                musicalCategory(3);
+                movieCategory(3);
 //                dramaCategory();
                 break;
             case 4:
                 // TODO: view movies in the horror category
 //                horrorCategory();
-                musicalCategory(4);
+                movieCategory(4);
                 break;
             case 5:
                 // TODO: view movies in the scifi category
 //                scifiCategory();
-                musicalCategory(5);
+                movieCategory(5);
                 break;
         }
     }
@@ -122,7 +122,7 @@ public class MoviesApplication {
         }
     }
 
-    public static void musicalCategory(int input) {
+    public static void movieCategory(int input) {
         MoviesArray.findAll();
         for (Movie mn : MoviesArray.findAll()) {
             if (input == 2 && mn.getCategory().equals("musical")) {
