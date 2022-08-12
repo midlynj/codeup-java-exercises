@@ -5,18 +5,21 @@ public class ArraysExercises {
         int[] numbers = {1, 2, 3, 4, 5};
         System.out.println(Arrays.toString(numbers));
 
-        String[] people = new String[3];
-        people[0] = "Katara";
-        people[1] = "Joeey";
-        people[2] = "Hope";
+        Person[] people = new Person[3];
+        people[0] = new Person("Katara");
+        people[1] = new Person("Joeey");
+        people[2] = new Person("Hope");
 
-        for (String person : people) {
+        for (Person person : people) {
             System.out.println(person);
         }
-        System.out.println(addPerson(people,"Bob"));
+        System.out.println(addPerson(people,new Person("Bob")));
+        System.out.println(Arrays.toString(people));
+
+
     }
 
-    public static String addPerson(String[]people, String person ) {
+    public static String addPerson(Person[] people, Person person ) {
       people =  Arrays.copyOf(people, people.length +1);
 //      person = people[0];
 //      person = people[people.length-1];
@@ -25,4 +28,5 @@ public class ArraysExercises {
 
       return Arrays.toString(people)  + person;
     }
+
 }
