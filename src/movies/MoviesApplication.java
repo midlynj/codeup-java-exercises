@@ -127,13 +127,13 @@ public class MoviesApplication {
         for (Movie mn : MoviesArray.findAll()) {
             if (input == 2 && mn.getCategory().equals("musical")) {
                 System.out.println(mn.getName());
-            } else if (input == 3 &&   mn.getCategory().equals("drama")) {
+            } else if (input == 3 && mn.getCategory().equals("drama")) {
 //                mn.getCategory().equals("drama");
                 System.out.println(mn.getName());
-            } else if (input == 4 &&   mn.getCategory().equals("horror")) {
+            } else if (input == 4 && mn.getCategory().equals("horror")) {
 //                mn.getCategory().equals("horror");
                 System.out.println(mn.getName());
-            } else if (input == 5 &&   mn.getCategory().equals("scifi")) {
+            } else if (input == 5 && mn.getCategory().equals("scifi")) {
 //                mn.getCategory().equals("scifi");
                 System.out.println(mn.getName());
             } else if (input == 1) {
