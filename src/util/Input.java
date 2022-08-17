@@ -48,19 +48,27 @@ public class Input {
         return userNumber;
     }
 
-    private int getInt() {
+    public int getInt() {
         System.out.println("Enter a number");
-        int userFavNum = scanner.nextInt();
-        return userFavNum;
+        String s = getString();
+        try {
+            int i = Integer.parseInt(s);
+            return i;
+
+        } catch (Exception e) {
+            System.out.println("Uh oh, something went wrong: " + e.getMessage());
+        }
+        return getInt();
     }
 
     private double getDouble(double min, double max) {
         System.out.println("Enter a number between " + min + " and " + max);
-        double userDouble = scanner.nextDouble();
-        if (userDouble < min || userDouble > max) {
+        String s = getString();
+        int i = Integer.valueOf(s);
+        if (i < min || i > max) {
             return getDouble(min, max);
         }
-        return userDouble;
+        return i;
     }
 
     private double getDouble() {

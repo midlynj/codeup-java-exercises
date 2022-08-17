@@ -1,6 +1,7 @@
 package grades;
 
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class GradesApplication {
 
@@ -60,6 +61,23 @@ public class GradesApplication {
             System.out.print(key + "  |  ");
         }
 
+        System.out.println("\n\nWhich username you want more information on?");
+
+        Scanner scanner = new Scanner(System.in);
+        String moreInfoOnUserName = scanner.next();
+
+       if (!students.containsKey(moreInfoOnUserName)) {
+           System.out.println("Sorry, personnel not in the system.");
+           System.out.println("Please try again at a later time");
+           while(true);
+       } else if (students.containsKey(moreInfoOnUserName)) {
+           System.out.println("done");
+
+       }
+
+
+
+
 
 
     }
@@ -71,3 +89,13 @@ public class GradesApplication {
 //    }
 
 }
+
+//  if (moreInfoOnUserName.equals("JoeyDaGOAT")) {
+//          System.out.println(joey);
+//          } else if (moreInfoOnUserName.equals("PrinceOF Egypt")) {
+//          System.out.println(kairo);
+//          } else if (moreInfoOnUserName.equals("Water Bending Girl")) {
+//          System.out.println(katara);
+//          } else if (moreInfoOnUserName.equals("Humanity Strongest Soldier")) {
+//          System.out.println(levi);
+//          }

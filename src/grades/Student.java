@@ -41,4 +41,9 @@ public class Student {
     public ArrayList<Integer> getGrade() {
        return grades;
     }
+
+    @Override
+    public String toString() {
+        return studentName + grades;
+    }
 }
